@@ -1,0 +1,89 @@
+body {
+  font-family: "Helvetica", sans-serif;
+  font-size: 15px;
+  line-height: 21px;
+  font-weight: 400;
+  color: @color-text;
+  background-color: #ffffff;
+  margin: 0;
+}
+
+a {
+  text-decoration: none;
+  transition: all ease 0.3s;
+  cursor: pointer;
+
+  &:hover,
+  &:active,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+p {
+  margin: 0;
+}
+
+button {
+  cursor: pointer;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+  margin: 0;
+}
+
+ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  border-color: @color-border;
+}
+
+.vis-hidd {
+  position: absolute !important;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+  padding: 0 !important;
+  border: 0 !important;
+  height: 1px !important;
+  width: 1px !important;
+  overflow: hidden;
+}
+
+main {
+
+}
+
+.container {
+  width: 100%;
+  max-width: 1200px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
+
+.overlay {
+  background-color: rgba(255, 255, 255, 0.5);
+  position: fixed;
+  display: block;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1999;
+  cursor: pointer;
+}
+
+* {
+  box-sizing: border-box;
+}
+

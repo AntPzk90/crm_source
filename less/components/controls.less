@@ -1,0 +1,105 @@
+.controls {
+  min-height: 40px;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.controls__btn {
+  border-radius: 3px;
+  border: 1px solid @blue;
+  font-weight: bold;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 14px;
+  margin-right: 20px;
+  color: @blue;
+
+  &:hover {
+    opacity: 0.8;
+    box-shadow: 0px 20px 30px 0px rgba(18, 59, 59, 0.09);
+  }
+}
+
+.controls__btn--disabled {
+  color: @color-border;
+  border-color: @color-border;
+}
+
+.controls__btn--active {
+  color: #ffffff;
+  background-color: @blue;
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.controls__add-btn {
+  padding-left: 44px;
+  padding-right: 22px;
+  position: relative;
+
+  &::before {
+    content: "+";
+    position: absolute;
+    left: 23px;
+    top: 7px;
+    font-size: 21px;
+  }
+}
+
+.controls__tile-btn {
+  position: relative;
+  width: 50px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    background-image: url(../img/icons/tile-active-icon.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.controls__row-btn {
+  position: relative;
+  width: 50px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 21px;
+    width: 21px;
+    position: absolute;
+    top: 10px;
+    left: 14px;
+    background-image: url(../img/icons/gamburger-active-icon.png);
+    background-size: cover;
+    background-position: 50%;
+    background-repeat: no-repeat;
+  }
+}
+
+.controls__tile-btn.controls__btn--active {
+  background-color: @blue;
+
+  &::after {
+    background-image: url(../img/icons/tile-white-icon.png);
+  }
+}
+
+.controls__row-btn.controls__btn--active {
+  background-color: @blue;
+
+  &::after {
+    background-image: url(../img/icons/gamburger-white-icon.png);
+  }
+}

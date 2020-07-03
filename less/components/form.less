@@ -1,0 +1,132 @@
+.form__fieldset {
+  padding: 0;
+}
+
+.form__legend {
+}
+
+.form__select {
+  padding-left: 15px;
+  padding-top: 6px;
+  padding-right: 40px;
+  padding-bottom: 5px;
+  border-radius: 3px;
+  border: 1px solid @color-border;
+  position: relative;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background-image: url(../img/icons/select-arrow-icon.png);
+  background-size: 12px 7px;
+  background-position: calc(100% - 14px) 12px;
+  background-repeat: no-repeat;
+
+  option {
+    font-size: 15px;
+    line-height: 22px;
+    padding-left: 15px;
+    padding-top: 6px;
+    padding-right: 15px;
+    padding-bottom: 5px;
+    min-height: 28px;
+    border-bottom: 1px solid @color-border;
+    display: block;
+  }
+}
+
+.form__search-input,
+.form__text-input,
+.form__textarea {
+  padding-left: 15px;
+  padding-top: 6px;
+  padding-right: 15px;
+  padding-bottom: 5px;
+  border: 1px solid @color-border;
+}
+
+.form__search-input::placeholder,
+.form__text-input::placeholder,
+.form__textarea::placeholder {
+  color: #636362;
+}
+
+.add-new-project__form-select {
+  color: #636362;
+}
+
+.form__option {
+  position: relative;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 11px;
+    height: 11px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5px;
+    border-radius: 50%;
+  }
+}
+
+.form__option--not-active {
+  &::after {
+    background-color: #dcdcdc;
+  }
+}
+
+.form__option--waiting-activation {
+  &::after {
+    background-color: #626262;
+  }
+}
+
+.form__option--waiting-completion {
+  &::after {
+    background-color: #f6a522;
+  }
+}
+
+.form__option--failed {
+  &::after {
+    background-color: #861115;
+  }
+}
+
+.form__option--waiting-verification {
+  &::after {
+    background-color: #75daff;
+  }
+}
+
+.form__option--waiting-decision {
+  &::after {
+    background-color: #0166ff;
+  }
+}
+
+.form__option--made-tested {
+  &::after {
+    background-color: #0166ff;
+  }
+}
+
+.form__option--not-made-tested {
+  &::after {
+    background-color: #bd1ee1;
+  }
+}
+
+.form__option--urgent {
+  &::after {
+    background-color: #fff602;
+  }
+}
+
+.form__option--made-first {
+  &::after {
+    background-color: #c5343a;
+  }
+}
+
