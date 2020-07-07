@@ -1,0 +1,128 @@
+.add-new-type {
+  position: absolute;
+  min-width: 870px;
+  margin-left: -435px;
+  min-height: 610px;
+  padding-bottom: 33px;
+}
+
+.add-new-type .popup__title {
+  margin-bottom: 0;
+}
+
+.add-new-type__form-wrapper-top {
+  background-color: @color-background;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.add-new-type__form-litera {
+  max-width: 228px;
+  margin-right: 20px;
+  border-radius: 3px;
+}
+
+.add-new-type__form-name {
+  width: 100%;
+  border-radius: 3px;
+}
+
+.add-new-type__form-wrapper-main {
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-top: 20px;
+}
+
+.add-new-type__main-fieldset,
+.add-new-type__additionally-fieldset {
+  border: none;
+  margin-bottom: 22px;
+
+  legend {
+    font-size: 21px;
+    line-height: 1;
+    margin-bottom: 15px;
+  }
+}
+
+.add-new-type__cell {
+  display: flex;
+  padding: 14px 19px;
+  background-color: @color-background;
+  border: 1px solid @color-border;
+  border-radius: 3px;
+  margin-bottom: 28px;
+  position: relative;
+}
+
+.add-new-type__cell-btn-close {
+  height: 21px;
+  width: 21px;
+  border-radius: 50%;
+  border: 1px solid @color-border;
+  background-color: #ffffff;
+  position: absolute;
+  top: -9px;
+  right: -5px;
+
+  &::after {
+    content: "";
+    display: block;
+    height: 13px;
+    width: 2px;
+    background-color: @blue;
+    transform: rotate(-45deg);
+    position: absolute;
+    top: 3px;
+    left: 9px;
+  }
+
+  &::before {
+    content: "";
+    display: block;
+    height: 13px;
+    width: 2px;
+    background-color: @blue;
+    transform: rotate(45deg);
+    position: absolute;
+    top: 3px;
+    left: 9px;
+  }
+
+  &:hover {
+    opacity: 0.7;
+  }
+}
+
+.add-new-type__form-cell {
+  max-width: 398px;
+  width: 100%;
+  margin-right: 10px;
+}
+
+.add-new-type__main-cell .cd-dropdown {
+  max-width: 398px;
+  margin-left: 10px;
+}
+
+.add-new-type__btn {
+  border-radius: 3px;
+  border: 1px solid #66a0e0;
+  font-weight: 700;
+  margin-right: 20px;
+  color: #66a0e0;
+  padding: 10px 14px;
+  background-color: #ffffff;
+}
+
+.add-new-project__btn-submit {
+  display: block;
+  width: calc(100% - 40px);
+  margin: 0 auto;
+}
+

@@ -1,4 +1,5 @@
 //переключение раскладки (ряды плитка)
+
 let rowBtn = $('.controls__row-btn');
 let tileBtn = $('.controls__tile-btn');
 rowBtn.click(function(evt) {
@@ -33,11 +34,9 @@ function addOverlay () {
 
   let html = '<div class="overlay"></div>';
   $('body').append(html);
-  $('body').css('overflow', 'hidden');
 
   function removerOverlay () {
     $('.overlay').remove();
-    $('body').removeAttr('style');
   }
 
   $('.overlay').click(function () {
@@ -51,7 +50,7 @@ function removerOverlay () {
   $('body').removeAttr('style');
 }
 
-// появление попапа "добавление задачи"
+// появление попапа "добавление задачи" на стр с проектами
 
 let addNewprojectBtn = $('.controls__add-btn');
 let popupCloseBtn = $('.popup__btn-close');
@@ -67,7 +66,7 @@ popupCloseBtn.click(function (evt) {
   $(this).parent().fadeOut();
 });
 
-// Появление попапа "Настройка полей"
+// Появление попапа "Настройка полей" на стр. с проектами
 
 $('.controls__fields-setting').click(function (evt) {
   $('.field-settings').fadeIn();
@@ -97,8 +96,10 @@ $('.form__select').each(function (index) {
     gutter : 1,
   } );
 });
+
 // добавление а разметку спана с голубым текстом для выпадающих списков
 // автоматическое добавление <span class="cd-dropdown__blue-txt"> после "/"
+
 $('.cd-dropdown ul li span').each(function () {
   let text = $(this).text().split("/");
   if (text.length >= 2) {
@@ -109,4 +110,25 @@ $('.cd-dropdown ul li span').each(function () {
   }
 });
 
+// появление попапа "Добавление типа" стр. с типами проектов "add-project-type.html"
 
+$('.type-projects__workspace-controls .controls__add-btn').click(function () {
+  $('.add-new-type').fadeIn();
+  addOverlay();
+});
+
+// добавление полей в попапе "Добавление типа" стр. с типами проектов "add-project-type.html"
+
+$('.add-new-type__btn').click(function () {
+  let cellItem = $(this).parent().find('.add-new-type__cell').eq(0).clone();
+  $(this).before(cellItem);
+});
+
+// удаление полей в попапе "Добавление типа" стр. с типами проектов "add-project-type.html"
+
+$('.add-new-type__cell-btn-close').click(function () {
+  let countCells = $(this).parent().parent().find('.add-new-type__cell').length;
+  if (countCells >= 2) {
+    $(this).parent().remove();
+  }
+});
